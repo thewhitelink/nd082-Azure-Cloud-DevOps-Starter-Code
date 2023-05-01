@@ -9,7 +9,7 @@ After finalizing the above step, we integrated the Github actions with Azure Dev
 ## Project Plan
 
 * [Trello Board](https://trello.com/b/qT4hBPf3/project-management) for Project Planning
-* Project Plan
+* [Project Plan](Documents/ProjectPlan.xlsx) 
 
 ## Instructions
 
