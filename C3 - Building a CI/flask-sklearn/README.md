@@ -20,7 +20,9 @@ Please follow the following steps to setup the project
 
 ## Initial Setup:
 
-1. Clone the repository from github:
+1. Clone the repository from github: `https://github.com/thewhitelink/project2.git`
+
+   ![1682955161135](image/README/1682955161135.png)
 2. Change working directory to the scaffold folder:
 
    ```
@@ -36,8 +38,50 @@ Please follow the following steps to setup the project
    ```
    source ~/.pyvenv-project_2/bin/activate
    ```
+5. Run
+
+   ```
+   make all
+   ```
+
+   ![1682956578670](image/README/1682956578670.png)
+6. Modify to make fail, run:
+
+   ```
+   make test
+   ```
+
+   ![1682956898023](image/README/1682956898023.png)
 
 ## Python -
+
+1. Navicate to flask-sklearn directory
+2. Create python venv
+
+```
+python3 -m venv ~/.pyvenv-cicd_project
+```
+
+3. Source the venv
+   ```
+   source ~/.pyvenv-cicd_project/bin/activate
+   ```
+4. Upgrade PIP
+   ```
+   python -m pip install --upgrade pip
+   ```
+5. Install the required python modules
+   ```
+   pip install -r requirements.txt
+   ```
+6. Run your web-app
+   ```
+   az webapp up --sku F1 -n
+   ```
+7. Make a prediction with the prediction file
+   ```
+   ./make_predict_azure_app.sh
+   ```
 
 ## Azure -
 
