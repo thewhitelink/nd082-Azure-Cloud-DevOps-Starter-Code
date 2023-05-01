@@ -13,32 +13,38 @@ After finalizing the above step, we integrated the Github actions with Azure Dev
 
 ## Instructions
 
-<TODO:
+* Architectural Diagram located in Screenshots folder
+* Screenshots/ArchitectureOverview.png (Image sourced from Udacity Course "DevOps Engineer for Microsoft Azure")
 
-* Architectural Diagram (Shows how key parts of the system work)>
+Please follow the following steps to setup the project
 
-<TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
+## Initial Setup:
 
-* Project running on Azure App Service
-* Project cloned into Azure Cloud Shell
-* Passing tests that are displayed after running the `make all` command from the `Makefile`
-* Output of a test run
-* Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
-* Running Azure App Service from Azure Pipelines automatic deployment
-* Successful prediction from deployed flask app in Azure Cloud Shell.  [Use this file as a template for the deployed prediction](https://github.com/udacity/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C2-AgileDevelopmentwithAzure/project/starter_files/flask-sklearn/make_predict_azure_app.sh).
-  The output should look similar to this:
+1. Clone the repository from github:
+2. Change working directory to the scaffold folder:
 
-```bash
-udacity@Azure:~$ ./make_predict_azure_app.sh
-Port: 443
-{"prediction":[20.35373177134412]}
-```
+   ```
+   cd scaffold
+   ```
+3. Create Python virtual environment using the following command:
 
-* Output of streamed log files from deployed application
+   ```
+   python3 -m venv ~/.pyvenv-project_2
+   ```
+4. Source Virtual Environment using the following command:
+
+   ```
+   source ~/.pyvenv-project_2/bin/activate
+   ```
+
+## Python -
+
+## Azure -
+
+## Locust -
 
 ## Enhancements
 
-<TODO: A short description of how to improve the project in the future>
 
 ## Demo
 
