@@ -1,0 +1,1 @@
+az webapp up --name project2app --resource-group Azuredevops --runtime "PYTHON:3.7"
