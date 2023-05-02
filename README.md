@@ -22,7 +22,7 @@ Please follow the following steps to setup the project
 
 1. Clone the repository from github: `https://github.com/thewhitelink/project2.git`
 
-   ![1682955161135](image/README/1682955161135.png)
+   ![1682955161135](Images/1682955161135.png)
 2. Change working directory to the scaffold folder:
 
    ```
@@ -44,14 +44,14 @@ Please follow the following steps to setup the project
    make all
    ```
 
-   ![1682956578670](image/README/1682956578670.png)
+   ![1682956578670](Images/1682956578670.png)
 6. Modify to make fail, run:
 
    ```
    make test
    ```
 
-   ![1682956898023](image/README/1682956898023.png)
+   ![1682956898023](Images/1682956898023.png)
 
 ## Python -
 
