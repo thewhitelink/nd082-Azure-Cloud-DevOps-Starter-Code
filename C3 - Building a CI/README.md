@@ -80,7 +80,7 @@ python3 -m venv ~/.pyvenv-cicd_project
 1. Run your web-app:
 
 ```
-az webapp up --sku F1 -n
+az webapp up --name project2app --resource-group Azuredevops --runtime "PYTHON:3.7"
 ```
 
 2. Make a prediction with the prediction file:
