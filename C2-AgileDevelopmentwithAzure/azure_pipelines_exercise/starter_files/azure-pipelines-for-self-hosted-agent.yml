@@ -68,28 +68,28 @@ stages:
       displayName: 'Upload package'
       artifact: drop
 
-- task: AzureWebApp@1
-  inputs:
-    azureSubscription: DeployConnection
-    subscriptionId: 67bd0a2e-3527-452d-b5c9-168d529053f6
-    region: eastus
-    appType: webAppLinux
-    sku: F1
-    appName: project2app
-    resourceGroupName: Azuredevops
-
 - stage: Deploy
   displayName: 'Deploy Web App'
   dependsOn: Build
   condition: succeeded()
   jobs:
-  - deployment: DeploymentJob
-    pool: myAgentPool
-    environment: $(environmentName)
-    strategy:
-      runOnce:
-        deploy:
-          steps:
+    - task: AzureWebApp@1
+      inputs:
+        azureSubscription: DeployConnection
+        subscriptionId: 67bd0a2e-3527-452d-b5c9-168d529053f6
+        region: eastus
+        appType: webAppLinux
+        sku: F1
+        appName: project2app
+        resourceGroupName: Azuredevops
+
+    - deployment: DeploymentJob
+      pool: myAgentPool
+      environment: $(environmentName)
+      strategy:
+        runOnce:
+          deploy:
+            steps:
 
           # - script: python3.7 -m pip install --upgrade pip setuptools wheel
           #   displayName: 'Install Tools'
