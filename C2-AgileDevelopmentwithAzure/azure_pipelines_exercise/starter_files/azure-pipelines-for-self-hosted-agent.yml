@@ -1,9 +1,4 @@
 # Starter pipeline    
-- task: AzureAppServiceSettings@1
-  inputs:
-    azureSubscription: 'DeployConnection'
-    appName: 'project2app'
-    resourceGroupName: 'Azuredevops'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -95,9 +90,10 @@ stages:
           #     architecture: 'x64'
           #   displayName: 'Use Python version'
 
-          - task: AzureWebApp@1
+          - task: AzureAppServiceSettings@1
             displayName: 'Deploy Azure Web App : flask-ml-service-project2'
             inputs:
-              azureSubscription: $(azureServiceConnectionId)
-              appName: $(webAppName)
+              azureSubscription: 'DeployConnection'
+              appName: 'project2app'
+              resourceGroupName: 'Azuredevops'
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
