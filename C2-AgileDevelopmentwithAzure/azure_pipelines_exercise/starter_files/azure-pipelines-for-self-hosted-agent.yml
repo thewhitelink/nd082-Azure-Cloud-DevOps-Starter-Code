@@ -99,5 +99,5 @@ stages:
               resourceGroupName: 'Azuredevops'
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
               generalSettings:
-                alwaysOn: 'true'
-                webSocketsEnabled: 'false'
+              alwaysOn: 'true'
+              webSocketsEnabled: 'false'
