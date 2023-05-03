@@ -75,7 +75,7 @@ stages:
         deploy:
           steps:
 
-          - script: python3.7.16 -m pip install --upgrade pip setuptools wheel
+          - script: python3.7 -m pip install --upgrade pip setuptools wheel
             displayName: 'Install Tools'
 
           - task: UsePythonVersion@0
