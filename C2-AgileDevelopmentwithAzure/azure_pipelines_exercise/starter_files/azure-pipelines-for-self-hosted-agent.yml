@@ -61,7 +61,6 @@ stages:
       displayName: 'Upload package'
       artifact: drop
 
-  stages:
   - stage: Deploy
     displayName: Deploy stage
     jobs:
