@@ -38,7 +38,7 @@ stages:
         python3.7 -m pip install setup
         python3.7 -m pip install -r requirements.txt
       workingDirectory: $(projectRoot)
-      displayName: 'myStep 1'
+      displayName: 'Install Python'
 
     - script: |
         python -m venv project2
@@ -80,7 +80,10 @@ stages:
       runOnce:
         deploy:
           steps:
-
+          - script:
+              python3.7 -m pip install --upgrade pip
+              python3.7 -m pip install setup
+              python3.7 -m pip install -r requirements.txt
           - task: UsePythonVersion@0
             inputs:
               versionSpec: '$(pythonVersion)'
