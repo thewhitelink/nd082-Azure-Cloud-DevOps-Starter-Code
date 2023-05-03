@@ -98,4 +98,3 @@ stages:
               appName: 'project2app'
               resourceGroupName: 'Azuredevops'
               packageForLinux: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
-              AppSettings: 'app.py'
