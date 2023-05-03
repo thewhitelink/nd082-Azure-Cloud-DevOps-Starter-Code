@@ -76,9 +76,9 @@ stages:
           - script:
               python3.7 -m venv ~./project2
               source ~/.project2/bin/activate
-              pip install --upgrade
-              pip install setup
-              pip install -r requirements.txt
+              python3.7 -m pip install --upgrade pip
+              python3.7 -m pip install setup
+              python3.7 -m pip install -r requirements.txt
               make install
           - task: UsePythonVersion@0
             inputs:
