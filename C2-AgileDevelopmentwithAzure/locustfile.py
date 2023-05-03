@@ -6,11 +6,11 @@ from locust import HttpUser, task, between
 
 class MyUser(HttpUser):
     wait_time = between(3, 5)
-    host = "https://flask-ml-service-ikhono.azurewebsites.net:443"
+    host = "https://project2app.azurewebsites.net:443"
 
     @task(1)
     def connectivity_test(self):
-        self.client.get("https://flask-ml-service-ikhono.azurewebsites.net")
+        self.client.get("https://project2app.azurewebsites.net")
 
     @task(2)
     def prediction_test(self):
