@@ -94,6 +94,8 @@ stages:
             displayName: 'Deploy Azure Web App : flask-ml-service-project2'
             inputs:
               azureSubscription: 'DeployConnection'
+              ConnectionType: 'AzureRM'
               appName: 'project2app'
               resourceGroupName: 'Azuredevops'
-              package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
+              packageForLinux: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
+              AppSettings: 'app.py'
