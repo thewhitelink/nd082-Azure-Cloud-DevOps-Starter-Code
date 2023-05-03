@@ -80,7 +80,12 @@ stages:
       runOnce:
         deploy:
           steps:
-
+            - task: AzureWebApp@1
+              displayName: 'Deploy Azure Web App : flask-ml-service-ikhono'
+              inputs:
+              azureSubscription: 'DeployConnection'
+              appName: 'project2app'
+              package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
           # - script: python3.7 -m pip install --upgrade pip setuptools wheel
           #   displayName: 'Install Tools'
 
@@ -90,14 +95,14 @@ stages:
           #     architecture: 'x64'
           #   displayName: 'Use Python version'
 
-          - task: AzureAppServiceSettings@1
-            displayName: 'Deploy Azure Web App : flask-ml-service-project2'
-            inputs:
-              azureSubscription: 'DeployConnection'
-              ConnectionType: 'AzureRM'
-              appName: 'project2app'
-              resourceGroupName: 'Azuredevops'
-              package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
-              generalSettings:
-              alwaysOn: 'true'
-              webSocketsEnabled: 'false'
+          # - task: AzureAppServiceSettings@1
+          #   displayName: 'Deploy Azure Web App : flask-ml-service-project2'
+          #   inputs:
+          #     azureSubscription: 'DeployConnection'
+          #     ConnectionType: 'AzureRM'
+          #     appName: 'project2app'
+          #     resourceGroupName: 'Azuredevops'
+          #     package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
+          #     generalSettings:
+          #     alwaysOn: 'true'
+          #     webSocketsEnabled: 'false'
