@@ -34,7 +34,7 @@ stages:
     pool: myAgentPool
     steps:    
     - script: |
-        python -m venv project2
+        python3.7 -m venv project2
         source project2/bin/activate
         pip install --upgrade pip
         pip install setup
@@ -42,7 +42,7 @@ stages:
       workingDirectory: $(projectRoot)
       displayName: "Install requirements"
     - script: |
-        python venv project2
+        python3.7 venv project2
         source project2/bin/activate
         make install
         make lint
