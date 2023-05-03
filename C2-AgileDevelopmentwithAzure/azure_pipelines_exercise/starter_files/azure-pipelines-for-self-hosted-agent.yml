@@ -74,7 +74,7 @@ stages:
         deploy:
           steps:
           - script:
-              python -m venv project2
+              python3.7 -m venv project2
               source project2/bin/activate
               pip install --upgrade pip
               pip install setup
