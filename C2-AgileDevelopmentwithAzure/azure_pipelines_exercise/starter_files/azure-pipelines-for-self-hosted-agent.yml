@@ -73,12 +73,7 @@ stages:
       runOnce:
         deploy:
           steps:
-          - script:
-              python3.7 -m venv ~./project2
-              source ~/.project2/bin/activate
-              python -m pip install --upgrade pip
-              pip install setup
-              pip install -r requirements.txt
+          
           - task: UsePythonVersion@0
             inputs:
               versionSpec: '$(pythonVersion)'
