@@ -11,7 +11,7 @@ pool: myAgentPool
 
 variables:
   # TODO: Replace the service connection name as used in the DevOps project settings
-  azureServiceConnectionId: '64c78da8-d0d3-450c-aa04-6c6269a24bef'
+  azureServiceConnectionId: 'c2858c4f-126a-4a3e-b4b1-3e4e5ea2f068'
 
   #azureSubscription: '67bd0a2e-3527-452d-b5c9-168d529053f6'
 
@@ -67,35 +67,20 @@ stages:
     - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
       displayName: 'Upload package'
       artifact: drop
-
+      
 - stage: Deploy
   displayName: 'Deploy Web App'
   dependsOn: Build
   condition: succeeded()
   jobs:
-    - task: AzureWebApp@1
-      inputs:
-        azureSubscription: DeployConnection
-        subscriptionId: 67bd0a2e-3527-452d-b5c9-168d529053f6
-        region: eastus
-        appType: webAppLinux
-        sku: F1
-        appName: project2app
-        resourceGroupName: Azuredevops
+  - deployment: DeploymentJob
+    pool: myAgentPool
+    environment: $(environmentName)
+    strategy:
+      runOnce:
+        deploy:
+          steps:
 
-    - deployment: DeploymentJob
-      pool: myAgentPool
-      environment: $(environmentName)
-      strategy:
-        runOnce:
-          deploy:
-            steps:
-              - task: AzureWebApp@1
-                displayName: 'Deploy Azure Web App : flask-ml-service-project2'
-                inputs:
-                  azureSubscription: $(azureServiceConnectionId)
-                  appName: $(webAppName)
-                  package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
           # - script: python3.7 -m pip install --upgrade pip setuptools wheel
           #   displayName: 'Install Tools'
 
@@ -105,3 +90,9 @@ stages:
           #     architecture: 'x64'
           #   displayName: 'Use Python version'
 
+          - task: AzureWebApp@1
+            displayName: 'Deploy Azure Web App : flask-ml-service-project2'
+            inputs:
+              azureSubscription: $(azureServiceConnectionId)
+              appName: $(webAppName)
+              package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
