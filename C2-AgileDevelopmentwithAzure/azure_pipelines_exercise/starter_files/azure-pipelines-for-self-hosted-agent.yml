@@ -6,7 +6,6 @@ trigger:
  branches:
   include:
     - project-2
-
 # TODO: Replace the agent pool name
 pool: myAgentPool
 
@@ -81,7 +80,7 @@ stages:
 
           - task: UsePythonVersion@0
             inputs:
-              versionSpec: '3.7'
+              versionSpec: '3.7.1'
             displayName: 'Use Python version'
 
           - task: AzureWebApp@1
