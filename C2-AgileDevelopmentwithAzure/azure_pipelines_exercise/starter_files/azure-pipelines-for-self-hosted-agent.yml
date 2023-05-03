@@ -75,14 +75,14 @@ stages:
         deploy:
           steps:
 
-          - script: python3.7 -m pip install --upgrade pip setuptools wheel
-            displayName: 'Install Tools'
+          # - script: python3.7 -m pip install --upgrade pip setuptools wheel
+          #   displayName: 'Install Tools'
 
-          - task: UsePythonVersion@0
-            inputs:
-              versionSpec: '3.7.16'
-              architecture: 'x64'
-            displayName: 'Use Python version'
+          # - task: UsePythonVersion@0
+          #   inputs:
+          #     versionSpec: '3.7.16'
+          #     architecture: 'x64'
+          #   displayName: 'Use Python version'
 
           - task: AzureWebApp@1
             displayName: 'Deploy Azure Web App : flask-ml-service-project2'
