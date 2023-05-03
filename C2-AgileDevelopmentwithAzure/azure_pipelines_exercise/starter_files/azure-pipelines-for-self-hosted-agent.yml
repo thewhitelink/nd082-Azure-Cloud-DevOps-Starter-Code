@@ -83,9 +83,9 @@ stages:
             - task: AzureWebApp@1
               displayName: 'Deploy Azure Web App : flask-ml-service-ikhono'
               inputs:
-              azureSubscription: 'DeployConnection'
-              appName: 'project2app'
-              package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
+                azureSubscription: 'DeployConnection'
+                appName: 'project2app'
+                package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
           # - script: python3.7 -m pip install --upgrade pip setuptools wheel
           #   displayName: 'Install Tools'
 
