@@ -89,8 +89,21 @@ az webapp up --name project2app --resource-group Azuredevops --runtime "PYTHON:3
 ./make_predict_azure_app.sh
 ```
 
-3. Display webapp logs:
-   ```
+Each time I tried this, I got an internal server error. 
+
+```
+odl_user [ ~/project2/C2-AgileDevelopmentwithAzure/azure_pipelines_exercise/starter_files ]$ ./make_predict_azure_app.sh 
+Port: 443
+<!doctype html>
+<html lang=en>
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+```
+
+Display webapp logs:
+
+3. ```
    az webapp log tail
    ```
 
@@ -107,5 +120,3 @@ Would be ideal to not require a screencast if you're also providing all of the i
 To keep things more consistent with a "production" environment, you could require branches be merged into a "master" branch for submission
 
 ## Demo
-
-<TODO: Add link Screencast on YouTube>
