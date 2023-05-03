@@ -62,9 +62,11 @@ stages:
       artifact: drop
       
 - stage: Deploy
-  displayName: Deploy stage
+  displayName: 'Deploy Web App'
+  dependsOn: Build
+  condition: succeeded()
   jobs:
-  - job: DeployJob
+  - deployment: DeploymentJob
     pool: myAgentPool
     environmentName: $(environmentName)
     steps:    
