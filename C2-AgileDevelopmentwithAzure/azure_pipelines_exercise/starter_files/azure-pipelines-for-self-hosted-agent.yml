@@ -11,7 +11,13 @@ pool: myAgentPool
 
 variables:
   # TODO: Replace the service connection name as used in the DevOps project settings
-  azureServiceConnectionId: 'd0c97e34-ac7e-48f8-b467-4b3b07b5d845'
+  azureServiceConnectionId: 'c2858c4f-126a-4a3e-b4b1-3e4e5ea2f068'
+
+  #azureSubscription: '67bd0a2e-3527-452d-b5c9-168d529053f6'
+
+  #azureTenantId: 'f958e84a-92b8-439f-a62d-4f45996b6d07'
+
+
   
   # TODO: Specify the value of the existing Web App name
   webAppName: 'project2app'
