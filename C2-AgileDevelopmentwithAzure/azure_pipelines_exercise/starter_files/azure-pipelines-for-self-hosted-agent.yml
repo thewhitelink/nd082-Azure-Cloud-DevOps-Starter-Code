@@ -100,9 +100,9 @@ stages:
           #     architecture: 'x64'
           #   displayName: 'Use Python version'
 
-          - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : flask-ml-service-project2'
-            inputs:
-              azureSubscription: $(azureServiceConnectionId)
-              appName: $(webAppName)
-              package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
+    - task: AzureWebApp@1
+      displayName: 'Deploy Azure Web App : flask-ml-service-project2'
+      inputs:
+        azureSubscription: $(azureServiceConnectionId)
+        appName: $(webAppName)
+        package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
