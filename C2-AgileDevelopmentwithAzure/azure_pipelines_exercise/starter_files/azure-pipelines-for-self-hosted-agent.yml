@@ -34,16 +34,16 @@ stages:
     pool: myAgentPool
     steps:    
     - script: |
-        python3.7 pip install --upgrade pip
-        python3.7 pip install setup
-        python3.7 pip install -r requirements.txt
+        pip install --upgrade pip
+        pip install setup
+        pip install -r requirements.txt
       workingDirectory: $(projectRoot)
       displayName: 'Install Python'
 
     - script: |
-        python venv project2
+        python -m venv project2
         source project2/bin/activate
-        python pip install --upgrade pip
+        pip install --upgrade pip
         pip install setup
         pip install -r requirements.txt
       workingDirectory: $(projectRoot)
@@ -81,9 +81,9 @@ stages:
         deploy:
           steps:
           - script:
-              python3.7 pip install --upgrade pip
-              python3.7 pip install setup
-              python3.7 pip install -r requirements.txt
+              pip install --upgrade pip
+              pip install setup
+              pip install -r requirements.txt
           - task: UsePythonVersion@0
             inputs:
               versionSpec: '$(pythonVersion)'
