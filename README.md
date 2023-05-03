@@ -55,25 +55,34 @@ Please follow the following steps to setup the project
 
 ## Python -
 
-1. Navigate to flask-sklearn directory
+1. Navigate to needed working directory
 2. Create python venv:
 
 ```
-python3 -m venv ~/.pyvenv-cicd_project
+python3 -m venv ~/.pyvenv-project_2
 ```
 
 3. Source the venv:
+
    ```
-   source ~/.pyvenv-cicd_project/bin/activate
+   source ~/.pyvenv-project_2/bin/activate
    ```
+
+   ![1683126946552](image/README/1683126946552.png)
 4. Install/Upgrade PIP:
+
    ```
    python -m pip install --upgrade pip
    ```
+
+   ![1683126888754](image/README/1683126888754.png)
 5. Install the required python modules using the predefined txt file:
+
    ```
    pip install -r requirements.txt
    ```
+
+   ![1683126826974](image/README/1683126826974.png)
 
 ## Azure -
 
@@ -83,13 +92,15 @@ python3 -m venv ~/.pyvenv-cicd_project
 az webapp up --name project2app --resource-group Azuredevops --runtime "PYTHON:3.7"
 ```
 
-2. Make a prediction with the prediction file:
+![1683126805541](image/README/1683126805541.png)
+
+3. Make a prediction with the prediction file:
 
 ```
 ./make_predict_azure_app.sh
 ```
 
-Each time I tried this, I got an internal server error. 
+Each time I tried this, I got an internal server error.
 
 ```
 odl_user [ ~/project2/C2-AgileDevelopmentwithAzure/azure_pipelines_exercise/starter_files ]$ ./make_predict_azure_app.sh 
@@ -101,11 +112,15 @@ Port: 443
 <p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
 ```
 
+![1683126786950](image/README/1683126786950.png)
+
 Display webapp logs:
 
 3. ```
    az webapp log tail
    ```
+
+![1683126770569](image/README/1683126770569.png)
 
 ## Locust
 
