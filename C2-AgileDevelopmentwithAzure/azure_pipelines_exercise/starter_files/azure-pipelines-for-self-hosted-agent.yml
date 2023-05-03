@@ -86,23 +86,3 @@ stages:
                 azureSubscription: 'DeployConnection'
                 appName: 'project2app'
                 package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
-          # - script: python3.7 -m pip install --upgrade pip setuptools wheel
-          #   displayName: 'Install Tools'
-
-          # - task: UsePythonVersion@0
-          #   inputs:
-          #     versionSpec: '3.7.16'
-          #     architecture: 'x64'
-          #   displayName: 'Use Python version'
-
-          # - task: AzureAppServiceSettings@1
-          #   displayName: 'Deploy Azure Web App : flask-ml-service-project2'
-          #   inputs:
-          #     azureSubscription: 'DeployConnection'
-          #     ConnectionType: 'AzureRM'
-          #     appName: 'project2app'
-          #     resourceGroupName: 'Azuredevops'
-          #     package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
-          #     generalSettings:
-          #     alwaysOn: 'true'
-          #     webSocketsEnabled: 'false'
