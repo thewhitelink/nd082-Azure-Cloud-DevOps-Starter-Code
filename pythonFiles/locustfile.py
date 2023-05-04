@@ -1,7 +1,7 @@
 import json
 import time
 import random
-from locust import HttpUser, task, between
+from pythonFiles.locust import HttpUser, task, between
 
 
 class MyUser(HttpUser):

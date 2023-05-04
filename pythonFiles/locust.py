@@ -1,5 +1,5 @@
 import time
-from locust import HttpUser, task, between
+from pythonFiles.locust import HttpUser, task, between
 
 
 class WebsiteUser(HttpUser):
