@@ -81,8 +81,8 @@ stages:
         deploy:
           steps:
             - task: AzureWebApp@1
-              displayName: 'Deploy Azure Web App : project2app'
+              displayName: 'Deploy Azure Web App : dw-app-01'
               inputs:
                 azureSubscription: 'azuredevops'
-                appName: 'project2app'
+                appName: 'dw-app-01'
                 package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
