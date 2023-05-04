@@ -81,7 +81,7 @@ stages:
         deploy:
           steps:
             - task: AzureWebApp@1
-              displayName: 'Deploy Azure Web App : flask-ml-service-ikhono'
+              displayName: 'Deploy Azure Web App : project2app'
               inputs:
                 azureSubscription: 'azuredevops'
                 appName: 'project2app'
