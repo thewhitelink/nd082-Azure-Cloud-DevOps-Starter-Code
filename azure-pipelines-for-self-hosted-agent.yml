@@ -83,6 +83,6 @@ stages:
             - task: AzureWebApp@1
               displayName: 'Deploy Azure Web App : flask-ml-service-ikhono'
               inputs:
-                azureSubscription: 'DeployConnection'
+                azureSubscription: 'azuredevops'
                 appName: 'project2app'
                 package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
