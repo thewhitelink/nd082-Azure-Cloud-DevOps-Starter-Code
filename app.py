@@ -2,9 +2,8 @@ from flask import Flask, request, jsonify
 from flask.logging import create_logger
 import logging
 
-
 import pandas as pd
-from sklearn.externals import joblib
+# from sklearn.externals import joblib
 import joblib
 from sklearn.preprocessing import StandardScaler
 
@@ -31,10 +30,8 @@ def predict():
     # Performs an sklearn prediction
 
     try:
-        #
         # Load pretrained model as clf. Try any one model. 
         clf = joblib.load("LinearRegression.joblib")
-        #clf = joblib.load("StochasticGradientDescent.joblib")
     except:
         LOG.info("JSON payload: %s json_payload")
         return "Model not loaded"
