@@ -20,7 +20,7 @@ variables:
 
   
   # TODO: Specify the value of the existing Web App name
-  webAppName: 'project2app'
+  webAppName: 'dw-app-01'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
