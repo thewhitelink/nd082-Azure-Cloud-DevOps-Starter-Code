@@ -100,23 +100,10 @@ az webapp up --name project2app --resource-group Azuredevops --runtime "PYTHON:3
 ./make_predict_azure_app.sh
 ```
 
-Each time I tried this, I got an internal server error.
+![1683217998001](image/README/1683217998001.png)
 
-```
-odl_user [ ~/project2/C2-AgileDevelopmentwithAzure/azure_pipelines_exercise/starter_files ]$ ./make_predict_azure_app.sh 
-Port: 443
-<!doctype html>
-<html lang=en>
-<title>500 Internal Server Error</title>
-<h1>Internal Server Error</h1>
-<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
-```
-
-![1683126786950](image/README/1683126786950.png)
-
-Display webapp logs:
-
-3. ```
+4. Display webapp logs:
+5. ```
    az webapp log tail
    ```
 
