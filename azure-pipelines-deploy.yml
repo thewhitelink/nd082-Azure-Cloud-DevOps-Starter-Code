@@ -10,7 +10,7 @@ pool: myAgentPool
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
-  azureServiceConnectionId: 'd0c97e34-ac7e-48f8-b467-4b3b07b5d845'
+  azureServiceConnectionId: 'ea9ff6c8-3acd-44bf-95ec-96e2cddddf8c'
 
   # Web app name
   webAppName: 'dwilson-project2'
