@@ -51,9 +51,9 @@ Please follow the following steps to setup the project
    make test
    ```
 
-   ![1682956898023](Images/1682956898023.png)
+   ![1682956898023](Images/1682956898023.png)![1683311518985](image/README/1683311518985.png)
 
-## Python -
+Python -
 
 1. Navigate to needed working directory
 2. Create python venv:
