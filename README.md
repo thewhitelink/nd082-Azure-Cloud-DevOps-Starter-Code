@@ -109,6 +109,8 @@ az webapp up --name project2app --resource-group Azuredevops --runtime "PYTHON:3
 
 ![1683126770569](image/README/1683126770569.png)
 
+![1683303422113](image/README/1683303422113.png)
+
 ## Locust
 
 1. Start locust on your local host
