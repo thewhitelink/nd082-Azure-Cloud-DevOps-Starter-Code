@@ -11,16 +11,16 @@ pool: myAgentPool
 
 variables:
   # TODO: Replace the service connection name as used in the DevOps project settings
-  azureServiceConnectionId: 'ea9ff6c8-3acd-44bf-95ec-96e2cddddf8c'
+  azureServiceConnectionId: ''
 
-  azureSubscription: 'e85c2d28-e9aa-4775-85de-521be630b9fa'
+  azureSubscription: ''
 
-  azureTenantId: 'f958e84a-92b8-439f-a62d-4f45996b6d07'
+  azureTenantId: ''
 
 
   
   # TODO: Specify the value of the existing Web App name
-  webAppName: 'dw-app-01'
+  webAppName: 'project2app'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -81,8 +81,8 @@ stages:
         deploy:
           steps:
             - task: AzureWebApp@1
-              displayName: 'Deploy Azure Web App : dw-app-01'
+              displayName: 'Deploy Azure Web App : project2app'
               inputs:
                 azureSubscription: 'azuredevops'
-                appName: 'dw-app-01'
+                appName: 'project2app'
                 package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
