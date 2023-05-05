@@ -13,8 +13,8 @@ After finalizing the above step, we integrated the Github actions with Azure Dev
 
 ## Instructions
 
-* Architectural Diagram located in Screenshots folder
-* Screenshots/ArchitectureOverview.png (Image sourced from Udacity Course "DevOps Engineer for Microsoft Azure")
+* ![1683303325702](image/README/1683303325702.png)
+* ![1683303331368](image/README/1683303331368.png)
 
 Please follow the following steps to setup the project
 
@@ -114,11 +114,16 @@ az webapp up --name project2app --resource-group Azuredevops --runtime "PYTHON:3
 1. Start locust on your local host
 2. Go to the web page http://localhost:8089
 3. Enter your test setup with required number of users
+   ![1683302797461](image/README/1683302797461.png)
+   ![1683302766519](image/README/1683302766519.png)
 
 ## Enhancements
 
-Would be ideal to not require a screencast if you're also providing all of the instructions and screenshots
+Would be ideal to not require a screencast if you're also providing all of the instructions and screenshots.
 
-To keep things more consistent with a "production" environment, you could require branches be merged into a "master" branch for submission
+To keep things more consistent with a "production" environment, you could require branches be merged into a "master" branch for submission.
 
 ## Demo
+
+1. [AZ CLI Build](https://youtu.be/CRGhEKyHrhc)
+2. [CICD Build w/Azure DevOps and Github Actions](https://youtu.be/2HhYrpngip0)
